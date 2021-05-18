@@ -1,45 +1,44 @@
-function Greeting() {
+function Greeting(local) {
 
 
-    var namesList= [];
-    
+    var namesList = [];
+        namesList = local
 
-    function setName(name){
 
+    function setName(name) {
+if(!namesList.includes(name))
         namesList.push(name)
     }
 
+    function greetMessage(language, name) {
 
-function greetMessage(language,name){
 
-
-   if (language === "zulu") {
-       return  "Sawubona, " + name;
+        if (language === "zulu") {
+            return "Sawubona, " + name;
         }
         else if (language === "english") {
-         return  "Hi, " + name;
+            return "Hi, " + name;
         }
-        else if(language ==="portuguese"){
+        else if (language === "portuguese") {
             return "Oi, " + name;
         }
 
     }
 
-   function greetCounter(){
-       return namesList.length;
-   }
+    function greetCounter() {
+        return namesList.length;
+    }
 
 
-   function getNames(){
-       return namesList;
-   }
+    function getNames() {
+        return namesList;
+    }
 
-        return {
-            setName,
-            // aboutGreet,
-            greetMessage,
-            greetCounter,
-            getNames,
-        }
+    return {
+        setName,
+        greetMessage,
+        greetCounter,
+        getNames,
+    }
 }
 
