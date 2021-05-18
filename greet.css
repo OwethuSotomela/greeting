@@ -1,0 +1,33 @@
+h1{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    align-items: center;
+}
+section{
+    height: 80vh;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+section{
+    background-image:url(./5.png);
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+button{
+    display: inline;
+}
+.label-body{
+    font-size: 20px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.out{
+    border: black 3px solid;
+    border-radius: 10px;
+}
