@@ -26,6 +26,8 @@ function aboutGreet() {
         greet.setName(nameInput)
         counterElem.innerHTML = greet.greetCounter()
         localStorage.setItem('names', JSON.stringify(greet.getNames()))
+
+        outputElement.innerHTML = greet.firstL(textInputElement.value);
        
     }
 }

@@ -34,11 +34,16 @@ if(!namesList.includes(name))
         return namesList;
     }
 
+    function firstL(string) {
+        return string[0].toUpperCase() + string.slice(1).toLowerCase();
+    }
+
     return {
         setName,
         greetMessage,
         greetCounter,
         getNames,
+        firstL,
     }
 }
 
