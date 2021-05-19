@@ -2,12 +2,12 @@ function Greeting(local) {
 
 
     var namesList = [];
-        namesList = local
+    namesList = local
 
 
     function setName(name) {
-if(!namesList.includes(name))
-        namesList.push(name)
+        if (!namesList.includes(name))
+            namesList.push(name)
     }
 
     function greetMessage(language, name) {
@@ -28,12 +28,9 @@ if(!namesList.includes(name))
     function greetCounter() {
         return namesList.length;
     }
-
-
     function getNames() {
         return namesList;
     }
-
     function firstL(string) {
         return string[0].toUpperCase() + string.slice(1).toLowerCase();
     }
