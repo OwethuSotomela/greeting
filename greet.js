@@ -3,6 +3,7 @@ var outputElement = document.querySelector(".out");
 var radioButtonElement = document.querySelector(".itemTypeRadio");
 var textInputElement = document.querySelector(".fname");
 var counterElem = document.querySelector(".countOne");
+var resetbutton = document.querySelector(".resetBtn");
 
 var nameStored = [];
 if (localStorage['names']){
@@ -19,20 +20,25 @@ function aboutGreet() {
 
     if (checkedRadioBtn) {
         var itemType = checkedRadioBtn.value;
+
         if (nameInput != '') {
 
             greet.setName(nameInput)
-            outputElement.innerHTML = greet.greetMessage(itemType, nameInput)
+            // outputElement.innerHTML = greet.greetMessage(itemType, nameInput)
             greet.setName(nameInput)
             counterElem.innerHTML = greet.greetCounter()
             localStorage.setItem('names', JSON.stringify(greet.getNames()))
 
-            outputElement.innerHTML = greet.firstL(textInputElement.value);
+            outputElement.innerHTML = greet.firstL(textInputElement.value, itemType);
 
         }
     }
 
 }
+resetbutton.addEventListener('click', function(){
+    localStorage.clear();
+    location.reload();
+})
 counterElem.innerHTML = greet.greetCounter();
 greetButton.addEventListener('click', aboutGreet);
 
