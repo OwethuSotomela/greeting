@@ -26,7 +26,7 @@ function aboutGreet() {
     }else  if (nameInput == '') {
         errorElement.innerHTML = "Please enter a valid name!";
     } else if (!checkedRadioBtn) {
-        errorElement.innerHTML = "Please select a language";
+        errorElement.innerHTML = "Please select a language!";
     } else {
         greet.setName(nameInput)
         errorElement.innerHTML = greet.getMessage();
