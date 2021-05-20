@@ -1,29 +1,20 @@
 function Greeting(local) {
 
-
     var namesList = [];
     namesList = local
+    var message = "";
 
-
-    function setName(name) {
-        if (!namesList.includes(name))
-            namesList.push(name)
+    function setName(string) {
+        if (string != ''){
+            var name = string[0].toUpperCase() + string.slice(1).toLowerCase();
+            if (!namesList.includes(name)) {
+                namesList.push(name)
+            } else {
+                message = "Name already greeted!";
+            }
+        }
+        
     }
-
-    // function greetMessage(language, name) {
-
-
-    //     if (language === "zulu") {
-    //         return "Sawubona, " + name;
-    //     }
-    //     else if (language === "english") {
-    //         return "Hi, " + name;
-    //     }
-    //     else if (language === "portuguese") {
-    //         return "Oi, " + name;
-    //     }
-
-    // }
 
     function greetCounter() {
         return namesList.length;
@@ -32,15 +23,20 @@ function Greeting(local) {
         return namesList;
     }
     function firstL(string, names) {
-        return names + string[0].toUpperCase() + string.slice(1).toLowerCase();
+        if (string != '' && names != '') {
+            return names + string[0].toUpperCase() + string.slice(1).toLowerCase();
+        }
+    }
+    function getMessage() {
+        return message;
     }
 
     return {
         setName,
-        // greetMessage,
         greetCounter,
         getNames,
         firstL,
+        getMessage,
     }
 }
 

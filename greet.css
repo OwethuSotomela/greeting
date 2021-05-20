@@ -3,7 +3,7 @@ h1{
     align-items: center;
 }
 section{
-    height: 80vh;
+    height: 60vh;
     border: 1px solid black;
     display: flex;
     justify-content: center;
@@ -16,7 +16,7 @@ section{
     background-attachment: fixed;
 }
 section{
-    background-image:url(./5.png);
+    background-image:url(./11.jpeg);
     background-size:cover;
     background-repeat: no-repeat;
 }
@@ -24,10 +24,21 @@ button{
     display: inline;
 }
 .label-body{
-    font-size: 20px;
+    font-size: 25px;
     font-family:Georgia, 'Times New Roman', Times, serif;
 }
 .out{
     border: black 3px solid;
     border-radius: 10px;
 }
+.front{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.error{
+    display: flex;
+    flex-direction: row;
+}
+
+
