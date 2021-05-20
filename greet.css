@@ -22,6 +22,9 @@ section{
 }
 button{
     display: inline;
+    font-size: 15px;
+    
+
 }
 .label-body{
     font-size: 25px;
@@ -31,6 +34,9 @@ button{
     border: black 3px solid;
     border-radius: 10px;
 }
+.fname{
+    width: 800px;
+}
 .front{
     display: flex;
     flex-direction: row;
@@ -39,6 +45,9 @@ button{
 .error{
     display: flex;
     flex-direction: row;
+}
+.countOne{
+    padding-left: 10px;
 }
 
 
