@@ -16,7 +16,7 @@ section{
     background-attachment: fixed;
 }
 section{
-    background-image:url(./11.jpeg);
+    background-image:url(./12.jpeg);
     background-size:cover;
     background-repeat: no-repeat;
 }
@@ -49,5 +49,14 @@ button{
 .countOne{
     padding-left: 10px;
 }
-
-
+.error{
+    color: red;
+    font-weight: 500;
+    
+}
+@media only screen and (min-width: 60em) { /* 960px */
+    .container {
+      width: 75%;
+      max-width: 61rem;
+    }
+}

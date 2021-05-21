@@ -5,7 +5,8 @@ function Greeting(local) {
     var message = "";
 
     function setName(string) {
-        if (string != ''){
+        
+        if (string != '' && /^[a-zA-Z]+$/.test(string)){
             var name = string[0].toUpperCase() + string.slice(1).toLowerCase();
             if (!namesList.includes(name)) {
                 namesList.push(name)
@@ -23,7 +24,7 @@ function Greeting(local) {
         return namesList;
     }
     function firstL(string, names) {
-        if (string != '' && names != '') {
+        if (string != '' && names != '' && /^[a-zA-Z]+$/.test(string)) {
             return names + string[0].toUpperCase() + string.slice(1).toLowerCase();
         }
     }
