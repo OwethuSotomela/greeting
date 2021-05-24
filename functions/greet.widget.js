@@ -3,6 +3,7 @@ function Greeting(local) {
     var namesList = [];
     namesList = local
     var message = "";
+    var greetMe = "";
 
     function setName(string) {
         
@@ -15,6 +16,18 @@ function Greeting(local) {
             }
         }
         
+    }
+
+    function greetMessage(hello, string){
+
+        console.log(string);
+        if(hello === "isiZulu"){
+            greetMe = "Sawubona, "+ string[0].toUpperCase() + string.slice(1).toLowerCase();
+        }else if(hello === "English"){
+            greetMe = "Hi, " + string[0].toUpperCase() + string.slice(1).toLowerCase();;;
+        }else if(hello === "Portuguese"){
+            greetMe = "Oi, " + string[0].toUpperCase() + string.slice(1).toLowerCase();
+        }
     }
 
     function greetCounter() {
@@ -31,6 +44,9 @@ function Greeting(local) {
     function getMessage() {
         return message;
     }
+    function getGreet(){
+        return greetMe;
+    }
 
     return {
         setName,
@@ -38,6 +54,8 @@ function Greeting(local) {
         getNames,
         firstL,
         getMessage,
+        greetMessage,
+        getGreet,
     }
 }
 

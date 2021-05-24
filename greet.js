@@ -33,15 +33,23 @@ function aboutGreet() {
         counterElem.innerHTML = greet.greetCounter();
         localStorage.setItem('names', JSON.stringify(greet.getNames()));
 
-        if(greet.firstL(textInputElement.value, itemType) != undefined){
-            outputElement.innerHTML = greet.firstL(textInputElement.value, itemType);
-        }
+        greet.greetMessage(itemType, textInputElement.value)
+        outputElement.innerHTML = greet.getGreet();
     }
+
+    setTimeout(function(){
+        errorElement.innerHTML = "";
+    
+     }, 2000) 
+
     textInputElement.value = ""
     document.querySelector(".fname").value = ""
+    
 }
 resetbutton.addEventListener('click', function () {
-  
+    
+    errorElement.classList.remove('error')
+    errorElement.classList.add('error1')
     errorElement.innerHTML = "localStorage will be cleared after one second"
 
     setTimeout(function(){

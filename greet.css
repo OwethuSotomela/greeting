@@ -52,6 +52,14 @@ button{
 .error{
     color: red;
     font-weight: 500;
+    margin-bottom: 3%;
+    
+}
+
+.error1{
+    color: green;
+    font-weight: 500;
+    margin-bottom: 3%;
     
 }
 @media only screen and (min-width: 60em) { /* 960px */
