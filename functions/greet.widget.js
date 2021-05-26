@@ -24,7 +24,7 @@ function Greeting(local) {
         if(hello === "isiZulu"){
             greetMe = "Sawubona, "+ string[0].toUpperCase() + string.slice(1).toLowerCase();
         }else if(hello === "English"){
-            greetMe = "Hi, " + string[0].toUpperCase() + string.slice(1).toLowerCase();;;
+            greetMe = "Hi, " + string[0].toUpperCase() + string.slice(1).toLowerCase();
         }else if(hello === "Portuguese"){
             greetMe = "Oi, " + string[0].toUpperCase() + string.slice(1).toLowerCase();
         }

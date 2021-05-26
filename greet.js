@@ -40,7 +40,7 @@ function aboutGreet() {
     setTimeout(function(){
         errorElement.innerHTML = "";
     
-     }, 2000) 
+     }, 5000) 
 
     textInputElement.value = ""
     document.querySelector(".fname").value = ""
@@ -55,7 +55,7 @@ resetbutton.addEventListener('click', function () {
     setTimeout(function(){
         localStorage.clear();
         location.reload();
-         }, 1000)
+         }, 5000)
          
 })
 counterElem.innerHTML = greet.greetCounter();

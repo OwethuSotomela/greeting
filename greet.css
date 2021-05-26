@@ -3,7 +3,7 @@ h1{
     align-items: center;
 }
 section{
-    height: 60vh;
+    height: 100vh;
     border: 1px solid black;
     display: flex;
     justify-content: center;
