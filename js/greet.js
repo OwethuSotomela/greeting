@@ -50,7 +50,7 @@ resetbutton.addEventListener('click', function () {
     
     errorElement.classList.remove('error')
     errorElement.classList.add('error1')
-    errorElement.innerHTML = "localStorage will be cleared after one second"
+    errorElement.innerHTML = "localStorage will be cleared after 5 seconds"
 
     setTimeout(function(){
         localStorage.clear();
